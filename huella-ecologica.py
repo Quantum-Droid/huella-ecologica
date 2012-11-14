@@ -47,4 +47,11 @@ def exeQuestions(question):
 		else:
 			print("Valor no válido, intenta de nuevo")
 
-"Teclea 1 si consumes más productos animales que vegetales. Teclea 2 si consumes más productos vegetales que animales"
+def process(dataList):
+	archivoValores = open("valoresHuella.txt", "r")
+	values = [archivoValores.readline().split(" ") for i in range(len(dataList))]
+	archivoValores.close()
+	sumValues = 0
+	for i in range(len(dataList)):
+		sumValues += int(values[i][0 if dataList[i] else 1])
+	return sumValues 
