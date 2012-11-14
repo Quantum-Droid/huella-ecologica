@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # encoding: UTF-8
 # Diegomf
 
@@ -10,33 +11,32 @@
 # regresar lista con valores de t/f (8)
 ########################################
 
-
-
-def menuPrincipal():
+def mainMenu():
 	
 	print("¡Bienvenido a nuestro programa para calcular tu Huella Ecológica!")
 	print("En este programa sabrás tu Huella Ecológica y la prodrás comparar con la de otras personas en el mundo")
 
 	initialize = str(input("Teclea ENTER para empezar")) 
 	
-	f_questions = open("Questions", "r")
+	f_questions = open("Questions.txt", "r")
 	questions = f_questions.readlines()
 	f_questions.close()
 	answers = []
 
 	for line in questions:
-		answers.append(exeQuestion(line))	
+		answers.append(exeQuestions(line))	
 	
 	number = process(answers)
 	print("Tu Huella Ecológica es: %i " % (number))
 
 def exeQuestions(question):
-	notAccepted = False 
+	notAccepted = True
 	while notAccepted:
 		try:
 			a = int(input(question))
 		except ValueError:
 			print("Valor no válido, intenta de nuevo")
+			continue
 		if a == 1 :
 			return True
 		elif a == 2:
@@ -55,3 +55,6 @@ def process(dataList):
 	for i in range(len(dataList)):
 		sumValues += int(values[i][0 if dataList[i] else 1])
 	return sumValues 
+
+if __name__ == "__main__":
+	mainMenu()

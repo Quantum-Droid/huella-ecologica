@@ -1,0 +1,8 @@
+Teclea 1 si consumes más productos animales que vegetales, teclea 2 si consumes más productos vegetales que animales.
+Teclea 1 si consumes más productos empacados, teclea 2 si consumes más productos de tu mercado local.
+Teclea 1 si te transportas más en tu propio automóvil, teclea 2 si utilizas más el transporte colectivo.
+Teclea 1 si, cuando sales de vacaciones, son viajes largos, teclea 2 si son viajes cortos.
+Teclea 1 si acostumbras reciclar, teclea 2 si no.
+Teclea 1 si reusas papel, teclea 2 si no.
+Teclea 1 si tu energía eléctrica viene de medios no sustentables, teclea 2 si viene de medios sustentables y/o ecológicos.
+Teclea 1 si acostumbras ahorrar agua, teclea 2 si no.
