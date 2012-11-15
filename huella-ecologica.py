@@ -46,13 +46,13 @@ def mainMenu():
 
 	try:
 		globalResults = pickle.load( open("resultados.txt", "rb") )
-	except EOFError as e:
+	except IOError or EOFError as e:
 		globalResults = [value]
 	else:
 		globalResults.append(value)
 	pickle.dump(globalResults, open("resultados.txt", "wb") )
 
-	print("Tu Huella Ecológica es: %i. El promedio de las demás personas es: %i" % (value, sum(globalResults)/len(globalResults)))
+	print("Tu Huella Ecológica es: %i.\nEl promedio de las demás personas es: %i" % (value, sum(globalResults)/len(globalResults)))
 
 def exeQuestions(question, valueTrue=1, valueFalse=2):
 	"""
